@@ -11,3 +11,4 @@ Follow-up: what if you can't use division?
 ## Notes
 
 - assumed integers, but easily extendable
+- the 0 destroys it all

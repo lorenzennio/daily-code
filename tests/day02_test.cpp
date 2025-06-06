@@ -11,6 +11,14 @@ int main() {
     s = {2, 3, 6};
     assert(solution(a) == s);
 
+    a = {1, 0, 3, 4, 5};
+    s = {0, 60, 0, 0, 0};
+    assert(solution(a) == s);
+
+    a = {1, 2, 0, 4, 0};
+    s = {0, 0, 0, 0, 0};
+    assert(solution(a) == s);
+
     std::cout << "✅ All tests passed!" << std::endl;
     return 0;
 }
