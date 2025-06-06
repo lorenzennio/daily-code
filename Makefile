@@ -1,6 +1,6 @@
 # Compiler and flags
 CXX := g++
-CXXFLAGS := -std=c++23 -Wall -Wextra -O2 -MMD -MP -I lib
+CXXFLAGS := -std=c++23 -Wall -Wextra -O2 -MMD -MP -I lib -g
 
 # Directories
 SRC_DIR := days
