@@ -48,7 +48,15 @@ void create_test_file(const std::string& day_name) {
     fs::create_directories("tests");
 
     std::ofstream test_file("tests/" + day_name + "_test.cpp");
-    test_file.close();  // Empty test file
+    test_file << "#include <iostream>\n"
+              << "#include <cassert>\n"
+              << "#include \"../days/" << day_name << "/solution.hpp\"\n\n"
+              << "int main() {\n"
+              << "    // TODO: write tests for day " << day_name.substr(3) << "\n"
+              << "    std::cout << \"✅ All tests passed!\" << std::endl;" << "\n"
+              << "    return 0;\n"
+              << "}\n";
+
 }
 
 int main() {
