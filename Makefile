@@ -39,12 +39,19 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%/solution.cpp
 # Include generated dependency files if they exist
 -include $(wildcard $(OBJ_DIR)/*.d)
 
-# Run all tests
+# Run tests. Usage: make test [day=01]
+ifdef day
+PADDED_DAY := $(shell printf "%02d" $(day))
+test: $(BIN_DIR)/day$(PADDED_DAY)_test
+	@echo "Running $<..."
+	@./$<
+else
 test: $(BINARIES)
 	@for bin in $(BINARIES); do \
 		echo "Running $$bin..."; \
 		./$$bin; \
 	done
+endif
 
 # Create a new day using C++ script
 newday: $(BIN_DIR)/newday
